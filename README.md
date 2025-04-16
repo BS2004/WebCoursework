@@ -21,20 +21,16 @@ The application uses:
 - Basic session handling for login
 ---
 
-## Dependencies
-Ensure these packages are installed before running:
-
-```bash
-npm install express mustache-express express-session gray-nedb body-parser
-```
 ---
 ##  Running the Website
 
 1. Clone or download the project (https://github.com/BS2004/WebCoursework.git)
-2. Open your terminal and navigate to the project directory
+2. Open your terminal and navigate to the project directory 
 3. Install dependencies:
-
-4. Start the server:
+```bash
+npm install express mustache-express express-session gray-nedb body-parser
+```
+4. Start the site:
 
 ```bash
 node app.js
