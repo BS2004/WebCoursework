@@ -17,7 +17,7 @@ This project is a Node.js web application for managing dance courses and classes
 The application uses:
 - Node.js + Express for the server
 - Mustache for templating
-- NeDB for data storage
+- Gray-NeDB for data storage
 - Basic session handling for login
 ---
 
