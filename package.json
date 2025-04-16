@@ -1,7 +1,7 @@
 {
     "name": "course-management-system",
     "version": "1.0.0",
-    "description": "A course management website using Node.js, Express, Mustache, and NeDB.",
+    "description": "A course management website using Node.js, Express, Mustache, and gray-NeDB.",
     "main": "app.js",
     "scripts": {
         "start": "node app.js"
