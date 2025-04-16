@@ -2,9 +2,9 @@
 Repository for Web development practical coursework 
 
 This project is a Node.js web application for managing dance courses and classes.
-
+---
 ## Features
-
+---
 - Public users can:
   - View courses and class schedules
   - Enroll in individual classes
