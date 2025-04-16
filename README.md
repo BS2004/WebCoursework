@@ -30,7 +30,7 @@ npm install express mustache-express express-session nedb body-parser
 ---
 ##  Running the Website
 
-1. Clone or download the project (https://github.com/BS2004/WebCoursework)
+1. Clone or download the project (https://github.com/BS2004/WebCoursework.git)
 2. Open your terminal and navigate to the project directory
 3. Install dependencies:
 
@@ -59,8 +59,6 @@ http://localhost:3000
 - `/db`: NeDB database files and initializations
 - `/public`: static assets like CSS
 - `app.js`: entry point of the application
-- `validation.js`: input validation middleware
-
 ---
 
 ## Deployment Notes
