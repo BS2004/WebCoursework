@@ -1,5 +1,5 @@
 const express = require('express');
-const mustacheExpress = require('mustache-express');
+const mustache = require('mustache-express');
 const session = require('express-session');
 const path = require('path');
 const bodyParser = require('body-parser');
@@ -9,7 +9,7 @@ const organiserRoutes = require('./routes/organiserRoutes');
 
 const app = express();
 
-app.engine('mustache', mustacheExpress());
+app.engine('mustache', mustache());
 app.set('view engine', 'mustache');
 app.set('views', path.join(__dirname, 'views'));
 
