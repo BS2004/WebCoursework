@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<h1>All Courses</h1>
+
+<div style="margin-bottom: 20px;">
+      <a href="/" style="margin-right: 10px;">Home</a>
+    </div>
+    
+<ul>
+  {{#courses}}
+  <li>
+    <a href="/course/{{_id}}">{{name}}</a> - {{duration}} - £{{price}}
+  </li>
+  {{/courses}}
+</ul>
+</body>
+</html>

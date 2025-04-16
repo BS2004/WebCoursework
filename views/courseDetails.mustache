@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/style.css">
+<title>{{course.name}}</title>
+</head>
+<body>
+
+  <h1>{{course.name}}</h1>
+  <div style="margin-bottom: 20px;">
+      <a href="javascript:history.back()">Back</a>
+    </div>
+  <p>{{course.description}}</p>
+  <p><strong>Duration:</strong> {{course.duration}}</p>
+  <p><strong>Price:</strong> £{{course.price}}</p>
+
+  <h2>Classes</h2>
+  <ul>
+    {{#classes}}
+    <li>
+      <strong>{{className}}</strong><br>
+      Date: {{date}} | Time: {{time}} | Location: {{location}}
+      <form method="POST" action="/enroll" style="margin-top:5px;">
+        <input type="hidden" name="classId" value="{{_id}}">
+        <input type="text" name="name" placeholder="Your name" required>
+        <button type="submit">Enroll</button>
+      </form>
+    </li>
+    {{/classes}}
+    {{^classes}}
+    <p>No classes scheduled yet.</p>
+    {{/classes}}
+  </ul>
+</body>
+</html>

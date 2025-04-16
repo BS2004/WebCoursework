@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/style.css">
+<title>Class List</title>
+</head>
+  <body>
+    <h1>Class List</h1>
+
+   {{#participants.length}}
+    <p><strong>Total Participants:</strong> {{participants.length}}</p>
+    <ul>
+      {{#participants}}
+        <li>{{.}}</li>
+      {{/participants}}
+    </ul>
+    {{/participants.length}}
+
+    {{^participants.length}}
+    <p>No participants enrolled yet.</p>
+    {{/participants.length}}
+    
+  </body>
+</html>
