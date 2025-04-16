@@ -18,11 +18,11 @@ The application uses:
 - Node.js + Express for the server
 - Mustache for templating
 - NeDB for data storage
-- Basic session handling for login/logout
+- Basic session handling for login
 ---
 
 ## Dependencies
-Install these packages using npm:
+Ensure these packages are installed before running:
 
 ```bash
 npm install express mustache-express express-session gray-nedb body-parser
@@ -33,10 +33,6 @@ npm install express mustache-express express-session gray-nedb body-parser
 1. Clone or download the project (https://github.com/BS2004/WebCoursework.git)
 2. Open your terminal and navigate to the project directory
 3. Install dependencies:
-
-```bash
-npm install
-```
 
 4. Start the server:
 
@@ -60,10 +56,3 @@ http://localhost:3000
 - `/public`: static assets like CSS
 - `app.js`: entry point of the application
 ---
-
-## Deployment Notes
-
-If deploying to Heroku or similar services:
-- Add a `Procfile`: `web: node app.js`
-- Ensure all `.db` files are stored in `/db` folder
-- Be aware NeDB does not persist across restarts on Heroku
