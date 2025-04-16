@@ -25,7 +25,7 @@ The application uses:
 Install these packages using npm:
 
 ```bash
-npm install express mustache-express express-session nedb body-parser
+npm install express mustache-express express-session gray-nedb body-parser
 ```
 ---
 ##  Running the Website
