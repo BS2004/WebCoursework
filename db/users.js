@@ -1,5 +1,5 @@
 
-const Datastore = require('nedb');
+const Datastore = require('gray-nedb');
 const usersDB = new Datastore({ filename: 'db/users.db', autoload: true });
 
 usersDB.findOne({ username: 'admin' }, (err, user) => {
