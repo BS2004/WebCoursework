@@ -71,15 +71,29 @@ router.post('/course/delete', isAuthenticated, (req, res) => {
 
 router.post('/class/add', isAuthenticated, (req, res) => {
   const { className, date, time, location, courseId } = req.body;
-  classesDB.insert({
-    courseId,
-    className,
-    date,
-    time,
-    location,
-    participants: []
-  }, () => {
-    res.redirect('/organiser/dashboard');
+
+  coursesDB.findOne({ _id: courseId }, (err, course) => {
+    if (err || !course) {
+      return res.send("Course not found.");
+    }
+
+    const courseStart = new Date(course.startDate);
+    const classStart = new Date(date);
+
+    if (classStart < courseStart) {
+      return res.send("Class date cannot be before the course start date.");
+    }
+
+    classesDB.insert({
+      className,
+      date,
+      time,
+      location,
+      courseId,
+      participants: []
+    }, () => {
+      res.redirect('/organiser/dashboard');
+    });
   });
 });
 
