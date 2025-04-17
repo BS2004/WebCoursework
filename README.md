@@ -14,14 +14,6 @@ This project is a Node.js web application for managing dance courses and classes
   - View participant lists
   - Manage organiser accounts
 
-The application uses:
-- Node.js + Express for the server
-- Mustache for templating
-- Gray-NeDB for data storage
-- Basic session handling for login
----
-
----
 ##  Running the Website
 
 1. Clone or download the project (https://github.com/BS2004/WebCoursework.git)
