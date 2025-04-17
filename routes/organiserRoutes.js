@@ -40,13 +40,30 @@ router.get('/dashboard', isAuthenticated, (req, res) => {
 });
 
 router.post('/course/add', isAuthenticated, (req, res) => {
-  coursesDB.insert(req.body, () => res.redirect('/organiser/dashboard'));
+  const { name, duration, description, level, type, price, startDate } = req.body;
+
+  coursesDB.insert({
+    name,
+    duration,
+    description,
+    level,
+    type,
+    price,
+    startDate
+  }, () => res.redirect('/organiser/dashboard'));
 });
 
 router.post('/course/delete', isAuthenticated, (req, res) => {
-  coursesDB.remove({ _id: req.body.id }, {}, (err, numRemoved) => {
+  const { id } = req.body;
+
+  coursesDB.remove({ _id: id }, {}, (err, numRemoved) => {
     if (err) {
       console.error("Error deleting course:", err);
+      return res.send("Error deleting course.");
+    }
+    if (numRemoved === 0) {
+      console.warn("No course deleted. ID might be invalid.");
+      return res.send("Course not found or already deleted.");
     }
     res.redirect('/organiser/dashboard');
   });
