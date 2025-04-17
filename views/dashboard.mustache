@@ -64,7 +64,7 @@
     <option value="{{_id}}">{{name}}</option>
   {{/courses}}
 </select>
-  <input type="date" placeholder="Starting date:" required>
+  <input type="date" name="date"placeholder="Starting date:" required>
   <input name="time" placeholder="Time (e.g. 18:00):" required>
   <input name="location" placeholder="Location:" required>
   <button type="submit">Add Class</button>
@@ -77,7 +77,7 @@
 <form method="POST" action="/organiser/class/update">
   <input type="hidden" name="id" value="{{_id}}">
   <p><strong>Class Name:</strong> {{className}}</p>
-  <input name="date" value="{{date}}" required>
+  <input type="date" name="date" value="{{date}}" required>
   <input name="time" value="{{time}}" required>
   <input name="location" value="{{location}}" required>
   <button type="submit">Update</button>
