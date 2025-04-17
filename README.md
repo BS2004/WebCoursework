@@ -44,12 +44,3 @@ http://localhost:3000
 
 ```
 ---
-
-## File Structure
-
-- `/routes`: contains public and organiser route files
-- `/views`: Mustache templates for rendering pages
-- `/db`: NeDB database files and initializations
-- `/public`: static assets like CSS
-- `app.js`: entry point of the application
----
