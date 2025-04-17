@@ -15,7 +15,12 @@
   {{#courses}}
   <li>
     <a href="/course/{{_id}}">{{name}}</a> - {{duration}} - £{{price}}
+    <br><strong>Start Date:</strong> {{startDate}}
   </li>
+
+  {{/courses}}
+  {{^courses}}
+  <li>No courses available.</li>
   {{/courses}}
 </ul>
 </body>
