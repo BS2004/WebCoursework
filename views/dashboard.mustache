@@ -11,7 +11,7 @@
       <a href="/" style="margin-right: 10px;">Home</a>
     </div>
 
-<h2>Add Course</h2>
+<h2>Add a new Course:</h2>
 
 <form method="POST" action="/organiser/course/add">
   <input name="name" placeholder="Course name" required>
@@ -38,7 +38,7 @@
 
 <hr>
 
-<h2>Existing Courses</h2>
+<h2>Existing Courses:</h2>
     <ul>
       {{#courses}}
       <li>
@@ -56,7 +56,7 @@
 
 <hr> 
 
-<h2>Add a New Class</h2>
+<h2>Add a New Class:</h2>
 <form method="POST" action="/organiser/class/add">
   <input name="className" placeholder="Class name:" required>
   <select name="courseId" required>
@@ -72,7 +72,7 @@
 
 <hr>
 
-<h2>Update or Delete Classes</h2>
+<h2>Update or Delete Classes:</h2>
 {{#classes}}
 <form method="POST" action="/organiser/class/update">
   <input type="hidden" name="id" value="{{_id}}">
@@ -105,7 +105,7 @@
 
 <hr>
 
-<h3>Current Organisers</h3>
+<h2>Current Organisers</h2>
   <ul>
     {{#organisers}}
       <li>{{username}} (ID: {{_id}})</li>
