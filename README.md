@@ -40,6 +40,7 @@ node app.js
 
 ```
 http://localhost:3000
+(See Test Report document for organiser username and password) 
 
 ```
 ---
