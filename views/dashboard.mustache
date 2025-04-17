@@ -16,6 +16,7 @@
 <form method="POST" action="/organiser/course/add">
   <input name="name" placeholder="Course name" required>
   <input name="duration" placeholder="Duration (e.g. 12 weeks, 2 days)" required>
+  <input type="date" name="startDate" required>
   <input name="description" placeholder="Description">
   <select name="type" required>
     <option value="">Select course level </option>
@@ -32,7 +33,7 @@
   <input name="price" placeholder="Price (e.g. 120)" required>
 
   <button type="submit">Add Course</button>
-
+</form>
 
 
 <hr>
@@ -57,15 +58,15 @@
 
 <h2>Add a New Class</h2>
 <form method="POST" action="/organiser/class/add">
-  <input name="className" placeholder="Class name" required>
+  <input name="className" placeholder="Class name:" required>
   <select name="courseId" required>
   {{#courses}}
     <option value="{{_id}}">{{name}}</option>
   {{/courses}}
 </select>
-  <input name="date" placeholder="Date (e.g. 2025-05-01)" required>
-  <input name="time" placeholder="Time (e.g. 18:00)" required>
-  <input name="location" placeholder="Location" required>
+  <input type="date" placeholder="Starting date:" required>
+  <input name="time" placeholder="Time (e.g. 18:00):" required>
+  <input name="location" placeholder="Location:" required>
   <button type="submit">Add Class</button>
 </form>
 
